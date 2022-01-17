@@ -2,10 +2,10 @@ import React from "react";
 
 const DashBoard = () => {
     return (
-        <div class="container">
-            <h1 class="display-5">Dashboard</h1>
-            <table class="table">
-                <thead class="table-light">
+        <div className="container">
+            <h1 className="display-5">Dashboard</h1>
+            <table className="table">
+                <thead className="table-light">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Filename</th>
