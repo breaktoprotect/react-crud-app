@@ -1,3 +1,6 @@
+# Jeremy's ignore
+/supporting_backend/**
+
 # http://www.gnu.org/software/automake
 
 Makefile.in
