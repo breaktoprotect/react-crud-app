@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class UploadForm extends Component {
-    state = { selectedFile: null };
+    state = { selectedFile: null, progressPercent: 0.0 };
 
     fileSelectedHandler = (event) => {
         this.setState({
@@ -27,6 +27,10 @@ class UploadForm extends Component {
                             (progressEvent.loaded / progressEvent.total) * 100 +
                             "%"
                     );
+                    this.setState({
+                        progressPercent:
+                            (progressEvent.loaded / progressEvent.total) * 100,
+                    });
                 },
             })
             .then((res) => {
@@ -44,7 +48,8 @@ class UploadForm extends Component {
                 <p>Go ahead and select a file to upload.</p>
                 <input type="file" onChange={this.fileSelectedHandler} />
                 <button onClick={this.fileUploadHandler}>Upload File</button>
-                <p>File Upload Progress #TODO</p>
+                {/* TODO Hide progress when 0% */}
+                <p>File Upload Progress {this.state.progressPercent}%</p>
             </div>
         );
     }
