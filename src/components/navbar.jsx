@@ -16,12 +16,14 @@ const NavBar = () => {
                             className="d-inline-block align-top"
                             alt="Generic CRUD!"
                         />
-                        Generic CRUD
+                        Generic CRUD React App
                     </Navbar.Brand>
 
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/upload">Upload</Nav.Link>
+                        <Nav.Link href="/submit">Submit</Nav.Link>
+                        <Nav.Link href="/submitAsync">Submit Async</Nav.Link>
+                        <Nav.Link href="/upload">Upload files</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav>
                 </Container>

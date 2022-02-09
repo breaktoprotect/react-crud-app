@@ -8,9 +8,9 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 uploadFileDir = 'uploaded/'
 
-
+#* Upload
+@cross_origin
 @app.route('/submitUpload', methods = ['POST'])
-@cross_origin()
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
@@ -18,6 +18,12 @@ def upload_file():
         return '[*] File Uploaded Successfully'
     else:
         return redirect("/error404", code=302)
+
+#* Submit (Standard)
+
+
+
+#* Submit (Async)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
